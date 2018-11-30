@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>19- Modificando el estilo de los elementos 2</title>
+    <style>
+    .thumb {
+        width: 200px;
+        transition: 300ms all ease;
+    }
+
+    .grande {
+        width: 400px;
+    }
+    
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="button" value="Cambiar tamano de la imagen" onclick="zoom();">
+    </form>
+    <img id = "thumb" class="thumb" src="img/Captura de pantalla.png" width="800px">
+    <script>
+        var zoom = function(){
+            var thumb = document.getElementById("thumb");
+           
+            if(thumb.className == "thumb"){
+                thumb.className = "thumb grande";
+            } else {
+                thumb.className = "thumb";
+            }
+            // thumb.setAttribute("class", "thumb grande");
+        }
+    
+    </script>
+</body>
+</html>
