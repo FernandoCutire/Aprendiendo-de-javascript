@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <h1 id="titulo">Titulo de nuestro trabajo</h1>
+    <div id="subtitulo"></div>
+    <p>1. Lorem ipsum <b>dolor</b> sit amet consectetur adipisicing elit. Sunt, ad.</p>
+
+    <p id="segundo">2. Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+    
+    <p> 3. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, dolore quisquam beatae voluptatem perferendis quidem.</p>
+    <script>
+        var elementosP = document.getElementsByTagName("p")
+        var segundoP = document.getElementById("segundo");
+
+        // 1. - Crear el elemento
+        var elemento = document.createElement("h2");
+        // 2. - Crear un nodo de texto
+        var contenido = document.createTextNode("Cuticrack hizo estoN");
+        // 3. - Añadir el nodo de texto
+        elemento.appendChild(contenido);
+        // 4. - Agregar atributos al elemento
+        elemento.setAttribute("align", "center");
+        // 5. - Agregar el elemento al documento
+        document.body.appendChild(elemento);
+        
+
+
+    </script>
+</body>
+</html>

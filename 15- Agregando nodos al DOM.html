@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modificando el Document Object Model</title>
+</head>
+<body>
+    <ol id="lista">
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+    </ol>
+    <script>
+
+        var elemento = document.createElement("li"),
+            contenido = document.createTextNode("Cutiii");
+        elemento.appendChild(contenido);
+        
+        var padre = document.getElementsByTagName("li")[0].parentNode,
+            primerElemento = document.getElementsByTagName("li")[0];
+
+        padre.insertBefore(elemento, primerElemento);
+    </script>
+</body>
+</html>
