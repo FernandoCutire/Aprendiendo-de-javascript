@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>scope de javascript</title>
+</head>
+<body>
+    <script>
+        // Global: Podemos acceder a ellas desde cualquier parte del codigo
+        // Local: Variables creadas dentro de funciones, solo se accede desde la funcion o funciones anidada
+        // Solo podemos ver desde adentro de una funcion hacia afuera pero no al reves
+
+// Esto es para proteger el codigo
+        (function(){
+            var variableGlobal = "Esta es Global";
+    
+        var miFuncion = function(){
+           var variableLocal = "Esta es Local";
+          alert(variableLocal);
+          var FuncionLocal = function(){
+             var variableLocal = "Esta es una variable Local dentro de una funcion local"
+              // alert(variableLocal);
+           }
+           FuncionLocal()
+         }
+         miFuncion()
+       
+        }())
+
+
+
+
+
+
+
+        // var variableGlobal = "Esta es Global";
+    
+        //var miFuncion = function(){
+           // var variableLocal = "Esta es Local";
+          // alert(variableLocal);
+          //var FuncionLocal = function(){
+            //  var variableLocal = "Esta es una variable Local dentro de una funcion local"
+             // alert(variableLocal);
+          // }
+          // FuncionLocal()
+        // }
+        // miFuncion()
+       
+
+    </script>
+</body>
+</html>
